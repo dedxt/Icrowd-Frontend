@@ -1,0 +1,256 @@
+.worker-task {
+    text-align: center;
+
+    h2 {
+        border-bottom: 1px solid rgb(47, 50, 65);
+        margin: auto;
+        width: 70%;
+    }
+
+    .task-filter {
+        margin: 30px auto;
+        width: 70%;
+
+        .result {
+            float: right;
+            margin-right: 80px;
+        }
+
+        .result-error {
+            color: rgb(226, 2, 2);
+        }
+
+        button {
+            float: right;
+            border: none;
+            outline: none;
+            padding: 02px 20px;
+            border-radius: 00px 10px 10px 00px;
+            border-top: 1px solid rgb(47, 50, 65);
+            border-right: 1px solid rgb(47, 50, 65);
+            border-bottom: 1px solid rgb(47, 50, 65);
+        }
+
+        button:hover {
+            background: rgb(47, 50, 65);
+            color: rgb(255, 255, 255);
+            transition: 1.5s;
+        }
+
+        input {
+            float: right;
+            border: none;
+            outline: none;
+            padding: 01px 20px;
+            border-radius: 10px 00px 00px 10px;
+            border-top: 1px solid rgb(47, 50, 65);
+            border-left: 1px solid rgb(47, 50, 65);
+            border-bottom: 1px solid rgb(47, 50, 65);
+        }
+
+        .filter-button {
+            color: rgb(255, 255, 255);
+            background:  rgb(226, 2, 2);
+            border-top: 1px solid  rgb(226, 2, 2);
+            border-right: 1px solid  rgb(226, 2, 2);
+            border-bottom: 1px solid  rgb(226, 2, 2);
+
+        }
+
+        .filter-button:hover {
+            color: rgb(255, 255, 255);
+            background:  rgb(226, 2, 2);
+
+        }
+
+        .filter-task {
+            border-top: 1px solid  rgb(226, 2, 2);
+            border-left: 1px solid  rgb(226, 2, 2);
+            border-bottom: 1px solid  rgb(226, 2, 2);
+
+        }
+
+    }
+
+    .task-contents {
+        margin: 100px auto;
+        text-align: center;
+
+        .box {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            display: grid;
+            margin: 10px auto;
+    
+            .box-option {
+                border: 1px solid rgb(47, 50, 65);
+                background: transparent;
+                border-radius: 10px;
+                text-align: center;
+                margin: 10px;
+        
+                .image {
+                    background: rgb(48, 49, 54);
+                    border-radius: 10px 10px 00px 00px;
+                    height: 150px;
+                    width: 100%;
+                }
+
+                .task-description {
+                    text-align: left;
+                    padding: 05px; 
+                    
+                    h6 {
+                        text-decoration: underline;
+                    }
+                }
+
+                .task-action {
+                    grid-template-columns: 1fr 1fr;
+                    display: grid;
+                    margin: auto;
+                    width: 80%;
+
+                    button {
+                        margin: 10px;
+                        float: right;
+                        border: none;
+                        outline: none;
+                        transition: 1.5s;
+                        padding: 02px 20px;
+                        border-radius: 10px;
+                        color: rgb(255, 255, 255);
+                    }
+
+                    .view-task {
+                        color: rgb(47, 50, 65);
+                        background: rgb(255, 255, 255);
+                        border: 1px solid rgb(47, 50, 65);
+                    }
+
+                    .view-task:hover {
+                        color: rgb(255, 255, 255);
+                        background:  rgb(47, 50, 65);
+                        border: 1px solid rgb(255, 255, 255);
+                    }
+
+                    .delete-task {
+                        color: rgb(226, 0, 0);
+                        background: rgb(255, 255, 255);
+                        border: 1px solid rgb(226, 0, 0);
+                    }
+
+                    .delete-task:hover {
+                        color: rgb(255, 255, 255);
+                        background: rgb(226, 0, 0);
+                        border: 1px solid rgb(255, 255, 255);
+                    }
+                }
+                
+            }
+        }
+    
+    }
+    /* width */
+    ::-webkit-scrollbar {
+        width: 00px;
+    }
+    
+    .task-viewer {
+        top: 50%;
+        left: 50%;
+        width: 40%;
+        height: 80%;
+        z-index: 1;
+        padding: 00px;
+        overflow: auto;
+        position: fixed;
+        border-radius: 10px;
+        color: rgb(255, 255, 255);
+        background:  rgb(41, 41, 44);
+        transform: translate(-50%, -50%);
+        box-shadow: 05px 05px 10px 00px rgba(0, 0, 0, 0.5);
+
+        .close-icon{
+            border: 1px solid rgb(255, 255, 255);
+            border-radius: 50%;
+            padding: 5px;
+            float: right;
+            margin: 12px;
+            height: 20px;
+            width: 20px;
+        }
+
+        .box-option {
+            text-align: center;
+            margin: 10px;
+    
+            .image {
+                height: 300px;
+                width: 100%;
+            }
+
+            .task-description {
+                text-align: left;
+                padding: 05px;
+
+                h6 {
+                    text-decoration: underline;
+                }
+
+                .viewed-decription {
+                    padding: 10px;
+                    margin: 10px 00px;
+                    border-radius: 10px;
+                    border: 1px solid rgb(255, 255, 255);
+
+                    div {
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+            .task-action {
+                grid-template-columns: 1fr;
+                display: grid;
+                margin: auto;
+                width: 80%;
+
+                button {
+                    margin: 10px;
+                    float: right;
+                    border: none;
+                    outline: none;
+                    transition: 1.5s;
+                    padding: 02px 20px;
+                    border-radius: 10px;
+                    color: rgb(255, 255, 255);
+                }
+
+                .view-task {
+                    color: rgb(47, 50, 65);
+                    background: rgb(255, 255, 255);
+                    border: 1px solid rgb(47, 50, 65);
+                }
+
+                .view-task:hover {
+                    color: rgb(255, 255, 255);
+                    background:  rgb(47, 50, 65);
+                    border: 1px solid rgb(255, 255, 255);
+                }
+
+                .delete-task {
+                    color: rgb(226, 0, 0);
+                    background: rgb(255, 255, 255);
+                    border: 1px solid rgb(226, 0, 0);
+                }
+
+                .delete-task:hover {
+                    color: rgb(255, 255, 255);
+                    background: rgb(226, 0, 0);
+                    border: 1px solid rgb(255, 255, 255);
+                }
+            }
+            
+        }
+    }
+}
